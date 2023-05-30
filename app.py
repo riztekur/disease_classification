@@ -160,7 +160,7 @@ st.subheader('Result')
 
 to_predict = list(input_dict.values())
 
-st.write(clf.predict([to_predict]))
+st.write(clf.predict([to_predict])[0][0])
 
 result = pd.DataFrame(
     clf.predict_proba([to_predict]),
