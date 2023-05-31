@@ -234,7 +234,6 @@ pengendalian_dict = {
 - Desinfeksi udang yang positif AHPND selama 3-7 hari kemudian dikubur
 ''',
 'IMNV':'''
-"Pada awal fase infeksi ketika mortalitas masih rendah dapat dilakukan: 
 - Stabilisasi kualitas air khususnya suhu, salinitas, dan pH, kesadahan, dan alkalinitas hindari pergantian air secara drastis dan tingkatkan aerasi
 - Memberikan molase (25% dari FR/hari) atau diberi probiotik; dan mengurangi jumlah pakan atau menghentikan pakan sementara
 - Air buangan tambak yang terinfeksi ada baiknya dilakukan treatment sebelum dibuang untuk meminimalisir penyabaran penyakit ke tambak lainnya
