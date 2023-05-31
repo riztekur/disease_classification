@@ -226,10 +226,46 @@ Pertahankan kondisi kualitas air (shipon rutin)
 - Menerapkan biosecurity
 '''
 }
-pengendalian_dict = {}
+pengendalian_dict = {
+'AHPND':'''
+- Lakukan pengecekan di Lab sedini mungkin jika ditemukan tanda-tanda awal/gejala
+- Desinfeksi dasar tambak menghilangkan bahan organik dan pengeringan 15 hari
+- Desinfeksi peralatan tambak (kincir, anco, dll), saluran inlet dan outlet kemudian dikeringkan dan diberi kapur tohor 2 ton/Ha
+- Desinfeksi udang yang positif AHPND selama 3-7 hari kemudian dikubur
+''',
+'IMNV':'''
+"Pada awal fase infeksi ketika mortalitas masih rendah dapat dilakukan: 
+- Stabilisasi kualitas air khususnya suhu, salinitas, dan pH, kesadahan, dan alkalinitas hindari pergantian air secara drastis dan tingkatkan aerasi
+- Memberikan molase (25% dari FR/hari) atau diberi probiotik; dan mengurangi jumlah pakan atau menghentikan pakan sementara
+- Air buangan tambak yang terinfeksi ada baiknya dilakukan treatment sebelum dibuang untuk meminimalisir penyabaran penyakit ke tambak lainnya
+- Bila kematian banyak, nafsu makan menurun lebih baik panen saja
+- Bangkai udang harus diambil / dibersihkan tiap hari dari dalam tambak. Bangkai dikubur atau dibakar.
+- Turunkan pakan hingga 30 sampai 40% dari keadaan normal hingga kematian tidak ada (sedikit).
+- Berikan vitamin C dan imunostimulan secara terus menerus hingga kondisi udang normal (tidak ada kematian)
+- Kembalikan konsumsi pakan setelah kematian berhenti."
+''',
+'WFD':'''
+- Kurangi/hentikan pemberian pakan                        
+- Meningkatkan aerasi dengan maksimal                         
+- Disinfeksi dan sanitasi total ke seluruh sistem budidaya agar tidak menyebar ke tambak yang lainnya
+- Tambahkan bubuk bawang putih bersama pakan
+- Penggunaan probiotik dengan dosis 3x dari penggunaan normal
+''',
+'WSSV':'''
+- Kurangi pemberian pakan                        
+- Meningkatkan aerasi dengan maksimal                         
+- Menambahkan klorin untuk membunuh virus di dalam tambak dan air yang telah diberi klorin dibidarkan selama 4 hari sebelum memulai siklus baru                        
+- Disinfeksi dan sanitasi total ke seluruh sistem budidaya agar tidak menyebar ke tambak yang lainnya
+''',
+'EHP':'''
+- Bersihkan kolam dari spora, lakukan pemberian kapur atau CaO dengan perhitungan 6 ton/ha
+- Dibajak kedalam tanah 10-12 cm lalu diberi air dan biarkan meresap
+- Biarkan selama 1 minggu sebelum pengeringan, pada saat itu pH tanah akan naik ke 12 dan selama beberapa hari akan turun ke keadaan normal karena menyerap karbon dioksida dan menjadi CaCO3.
+'''
+}
 
 with pencegahan:
     st.markdown(pencegahan_dict[disease])
 
 with pengendalian:
-    st.write('Pengendalian')
+    st.markdown(pengendalian_dict[disease])
