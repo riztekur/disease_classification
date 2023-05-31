@@ -174,7 +174,9 @@ result['Probability'] = result['Probability'].map('{:,.2f}%'.format)
 
 st.dataframe(result, use_container_width=True)
 
-pencegahan, pengendalian = st.tabs(['Pencegahan','Pengendalian'])
+pencegahan_title= 'Pencegahan ' + disease
+pengendalian_title= 'Pengendalian ' + disease
+pencegahan, pengendalian = st.tabs([pencegahan_title,pengendalian_title])
 
 with pencegahan:
     st.write('Pencegahan')
