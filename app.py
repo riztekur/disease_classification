@@ -16,6 +16,8 @@ with st.expander("Identity"):
     kolam = st.text_input("Lokasi kolam")
 
 with st.expander("Ciri-ciri fisik"):
+    foto = st.camera_input("Foto")
+
     warna = st.multiselect(
         "Warna",
         options=[
