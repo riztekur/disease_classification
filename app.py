@@ -159,8 +159,9 @@ with feces2:
 st.subheader('Result')
 
 to_predict = list(input_dict.values())
+disease = clf.predict([to_predict])[0] 
 
-st.write(clf.predict([to_predict])[0])
+st.write(disease)
 
 result = pd.DataFrame(
     clf.predict_proba([to_predict]),
