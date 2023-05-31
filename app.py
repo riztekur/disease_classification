@@ -174,4 +174,10 @@ result['Probability'] = result['Probability'].map('{:,.2f}%'.format)
 
 st.dataframe(result, use_container_width=True)
 
-#st.write(clf.predict_proba([to_predict]))
+pencegahan, pengendalian = st.tabs(2)
+
+with pencegahan:
+    st.write('Pencegahan')
+
+with pengendalian:
+    st.write('Pengendalian')
