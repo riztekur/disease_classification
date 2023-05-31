@@ -178,8 +178,21 @@ pencegahan_title= 'Pencegahan ' + disease
 pengendalian_title= 'Pengendalian ' + disease
 pencegahan, pengendalian = st.tabs([pencegahan_title,pengendalian_title])
 
+pencegahan_dict = {
+    'AHPND':'''
+- Pertahankan kondisi kualitas air (lakukan sipon rutin)
+- Pemberian imunostimulan/probiotik pada air maupun feed secara rutin 
+- PL atau indukan diperoleh dari sumber terpercaya dan sudah SPF                        
+- Pengecekan kondisi udang secara rutin
+- Menerapkan biosecurity       
+- PCR benur, dan PL pada DOC 15
+'''
+}
+pengendalian_dict = {}
+
 with pencegahan:
     st.write('Pencegahan')
-
+    st.markdown(pencegahan_dict['AHPND'])
+    
 with pengendalian:
     st.write('Pengendalian')
