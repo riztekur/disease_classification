@@ -166,7 +166,7 @@ st.write(disease)
 result = pd.DataFrame(
     clf.predict_proba([to_predict]),
     columns=clf.classes_
-)
+).T.reset_index()
 
 result.columns = ['Disease', 'Probability']
 result['Probability'] = result['Probability'] * 100.0
