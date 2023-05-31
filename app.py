@@ -11,6 +11,10 @@ input_dict = {}
 
 st.title('Shrimp Disease Classification')
 
+with st.expander("Identity"):
+    nama = st.text_input("Nama")
+    kolam = st.text_input("Lokasi kolam")
+
 warna = st.multiselect(
     "Warna",
     options=[
