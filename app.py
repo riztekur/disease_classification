@@ -179,20 +179,57 @@ pengendalian_title= 'Pengendalian ' + disease
 pencegahan, pengendalian = st.tabs([pencegahan_title,pengendalian_title])
 
 pencegahan_dict = {
-    'AHPND':'''
+'AHPND':'''
 - Pertahankan kondisi kualitas air (lakukan sipon rutin)
 - Pemberian imunostimulan/probiotik pada air maupun feed secara rutin 
 - PL atau indukan diperoleh dari sumber terpercaya dan sudah SPF                        
 - Pengecekan kondisi udang secara rutin
 - Menerapkan biosecurity       
 - PCR benur, dan PL pada DOC 15
+''',
+'IMNV':'''
+- Pertahankan kondisi kualitas air (shipon rutin)
+- Pemberian imunostimulan/probiotik pada air maupun feed secara rutin 
+- PL atau indukan diperoleh dari sumber terpercaya dan sudah SPF                        
+- Pengecekan kondisi udang secara rutin 
+- Menerapkan biosecurity
+- Turunkan kedapatan tebar
+- Jaga kestabilan kualits air (plankton), dengan kecerahan 30 sd 40 cm
+- Berikan immunostimulant 
+- PCR benur, udang DOC 20, 35, 50
+''',
+'WFD':'''
+- Mengurangi jumlah tebar
+- Menggunakan desinfektan saat persiapan air
+- Pertahankan kondisi kualitas air dan mengurangi penumpukkan bahan organik (shipon rutin)
+- Pemberian imunostimulan/probiotik pada air maupun feed secara rutin (control populasi bakteri vibrio) 
+- Penggunaan benur berkualitas (SPF atau SPR) 
+- Kontrol kestabilan warna air dan rasio C:N:P              
+- Pengecekan kondisi udang secara rutin 
+- Menerapkan biosecurity 
+- Kontrol pemberian pakan  
+''',
+'WSSV':'''
+- Pertahankan kondisi kualitas air (shipon rutin)
+- Pemberian imunostimulan/probiotik pada air maupun feed secara rutin 
+- PL atau indukan diperoleh dari sumber terpercaya dan sudah SPF                        
+- Pengecekan kondisi udang secara rutin 
+- Menerapkan biosecurity  
+- PCR benur, udang pada DOC 40, dan 60
+''',
+'EHP':'''
+- Mengurangi jumlah padat tebar
+Pertahankan kondisi kualitas air (shipon rutin)
+- Pemberian imunostimulan/probiotik pada air maupun feed secara rutin 
+- PL atau indukan diperoleh dari sumber terpercaya dan sudah SPF                        
+- Pengecekan kondisi udang secara rutin 
+- Menerapkan biosecurity
 '''
 }
 pengendalian_dict = {}
 
 with pencegahan:
-    st.write('Pencegahan')
-    st.markdown(pencegahan_dict['AHPND'])
-    
+    st.markdown(pencegahan_dict[disease])
+
 with pengendalian:
     st.write('Pengendalian')
