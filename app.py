@@ -9,7 +9,7 @@ st.set_page_config(page_title="Shrimp Disease App")
 
 input_dict = {}
 
-st.title('Shrimp Disease Classification')
+st.title('Shrimp Disease Prediction')
 
 with st.expander("Identity"):
     nama = st.text_input("Nama")
