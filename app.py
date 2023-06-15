@@ -177,12 +177,22 @@ result = pd.DataFrame(
 
 result.columns = ['Disease', 'Probability']
 result['Probability'] = result['Probability'] * 100.0
+result = result[result['Probability']>=20.0]
+result = result.sort_values(by='Probability', ascending=False).reset_index(drop=True)
 result['Probability'] = result['Probability'].map('{:,.2f}%'.format)
 
 st.dataframe(result, use_container_width=True)
+st.caption("Penyakit yang ditampilkan adalah penyakit dengan peluang >= 20%")
 
-pencegahan_title= 'Pencegahan ' + disease
-pengendalian_title= 'Pengendalian ' + disease
+
+disease_opt = st.selectbox(
+    label="Pilih penyakit",
+    options=result['Disease'].unique(),
+    index=0)
+
+pencegahan_title= 'Pencegahan ' + disease_opt
+pengendalian_title= 'Pengendalian ' + disease_opt
+
 pencegahan, pengendalian = st.tabs([pencegahan_title,pengendalian_title])
 
 pencegahan_dict = {
@@ -226,7 +236,7 @@ pencegahan_dict = {
 ''',
 'EHP':'''
 - Mengurangi jumlah padat tebar
-Pertahankan kondisi kualitas air (shipon rutin)
+- Pertahankan kondisi kualitas air (shipon rutin)
 - Pemberian imunostimulan/probiotik pada air maupun feed secara rutin 
 - PL atau indukan diperoleh dari sumber terpercaya dan sudah SPF                        
 - Pengecekan kondisi udang secara rutin 
@@ -271,7 +281,7 @@ pengendalian_dict = {
 }
 
 with pencegahan:
-    st.markdown(pencegahan_dict[disease])
+    st.markdown(pencegahan_dict[disease_opt])
 
 with pengendalian:
-    st.markdown(pengendalian_dict[disease])
+    st.markdown(pengendalian_dict[disease_opt])
